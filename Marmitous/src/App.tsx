@@ -43,12 +43,6 @@ const App: React.FC = () => (
           <Route exact path="/tab1">
             <Tab1 />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
-          </Route>
-          <Route path="/tab3">
-            <Tab3 />
-          </Route>
           <Route path="/quickacces">
             <QuickAcces />
           </Route>
@@ -64,15 +58,7 @@ const App: React.FC = () => (
             <IonIcon icon={home} />
             <IonLabel>Accueil</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={search} />
-            <IonLabel>Recherche</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Mix</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab4" href="/quickacces">
+          <IonTabButton tab="tab2" href="/quickacces">
             <IonIcon icon={square} />
             <IonLabel>Quick acces</IonLabel>
           </IonTabButton>

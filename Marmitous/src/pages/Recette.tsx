@@ -16,14 +16,15 @@ import ExploreContainer from "../components/ExploreContainer";
 import styles from "./Page.module.css";
 import { Storage } from "@ionic/storage";
 import FavButton from "../components/FavButton";
+import { useHistory } from "react-router-dom";
 
 const Recette: React.FC = () => {
   let name = "";
-  const temps = "temps";
   const vote = "vote";
 
   const [title, setTitle] = useState("");
   const [video, setVideo] = useState("");
+  const [temps, setTemps] = useState("");
   const [preparation, setPrep] = useState<Array<String[]>>([]);
   const [ingredient, setIngre] = useState<String[]>([]);
   //const video = "https://www.youtube.com/embed/LUXanyYTcXI";
@@ -40,6 +41,7 @@ const Recette: React.FC = () => {
       setVideo(v.toString());
       setPrep(page.preparation);
       setIngre(page.ingredient);
+      setTemps(page.temps);
       localStorage.setItem("active", page.text);
     }
   };
